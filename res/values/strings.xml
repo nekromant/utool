@@ -8,7 +8,7 @@
     <string name="autostart_on">Start automatically when system boots</string>
     <string name="autostart_off">Do NOT start automatically when system boots</string>
     <string name="autostart">Atostart</string>
-    <string name="enable">Enabling eternal storage handling</string>
+    <string name="enable">Enable external storage handling</string>
     <string name="enable_on">Inserted storage devices will be handled by utool</string>
     <string name="enable_off">Inserted storage devices will NOT be handled by utool</string>
 
