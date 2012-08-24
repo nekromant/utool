@@ -1,0 +1,21 @@
+Necromant's utool
+------------------------------
+This is a small android app that allows you to run a custom script, once a device 
+with a special markerfile in its root dir is mounted by the system. 
+That's it. 
+Create the script file with whatever you want to, create an .IOMARKER file in the root 
+of the flash jump drive, or microsd (or change the filename in settings), fill in the path
+to the script, pick if you want to run as root. 
+Done.
+It also broadcasts 3 actions: 
+
+org.ncrmnt.utool.actions.FLASH_DETECTED - once a tagged media is detected for the first time
+org.ncrmnt.utool.actions.USCRIPT_DONE - once a script is done working
+org.ncrmnt.utool.actions.FLASH_REMOVED - once the tagged flash is removed from the system
+
+So you can pick those up in your own apps
+
+Only one marker tagged flash at the same time is supported.
+It is a quick hack for my 'internal use' in the terminal made out of a flytouch 2 tablet,
+so it's somewhat feature limited. If you want to extend it or have a questing - drop me a 
+mail

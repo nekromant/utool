@@ -1,0 +1,50 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.ncrmnt.utool"
+    android:versionCode="1"
+    android:versionName="0.1" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="15" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".Prefs"
+            android:label="@string/title_activity_main" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".uToolService"
+            android:enabled="true"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="org.ncrmnt.utool.uToolService.MEDIA_MOUNTED" />
+                <action android:name="org.ncrmnt.utool.uToolService.MEDIA_REMOVED" />
+                <action android:name="org.ncrmnt.utool.uToolService" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name="AutoStartRecv" >
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.MEDIA_REMOVED" />
+                <action android:name="android.intent.action.MEDIA_BAD_REMOVAL" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <data android:scheme="file" />
+
+                <category android:name="android.intent.category.HOME" >
+                </category>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

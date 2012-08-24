@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:summaryOff="@string/enable_off" android:enabled="true" android:key="enable" android:summaryOn="@string/enable_on" android:title="@string/enable"/>
+    <EditTextPreference android:dependency="enable" android:title="Marker file name" android:key="markerfile" android:defaultValue=".IOMARKER"/>
+    <EditTextPreference android:key="script" android:title="Script filename" android:dependency="enable"/>
+    <CheckBoxPreference android:key="root" android:title="Run script as root" android:dependency="enable"/>
+    <CheckBoxPreference android:key="n" android:title="(c) Necromant 2012 :: http://ncrmnt.org/"/>
+        
+</PreferenceScreen>
